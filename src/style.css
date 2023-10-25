@@ -1,0 +1,157 @@
+#seek-slider {
+    width: 75%;
+    margin-top: 5px;
+}
+#slider-value {
+    margin-top: 20px;
+}
+html {
+    /* border:1px solid red; */
+
+}
+
+.video-class {
+    display: flex;
+    flex: auto;
+    /* align-items: left; */
+    width: 75%;
+    /* padding: 0px;
+    margin: 10px; */
+    margin: 10px;
+    margin: 20px;
+    box-shadow: 1px 1px 10px #000000;
+
+}
+
+#file-list-cont{
+    width: 75%; /* Set the width of the container */
+}
+#file-list{
+    display: block;
+    width: 75%;
+    aspect-ratio: 16/9; /* Set the aspect ratio (height / width) */
+
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: rgba(60, 45, 74, 0.821);
+    box-shadow: 1px 1px 10px #000000;
+    border:1px solid;
+    border-radius: 10px;
+    /* color: aqua; */
+
+}
+.file-list-item{
+    
+    padding: 7px;
+    margin-left: 5px;
+    text-shadow: 5px;
+    color: aliceblue;
+    border-bottom :1px solid rgba(124, 105, 141, 0.547);
+    
+}
+.file-list-item a{
+    color:rgba(255, 255, 255, 0.943);
+    text-decoration: none;
+    ;
+}
+/* file-list > * */
+
+.main{
+    display: flex;
+    flex: 1 1 1;
+    align-items: center;
+    /* justify-items: center; */
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgb(84, 63, 104);
+    width: 100%;
+    box-shadow: 1px 1px 10px #000000;
+
+}
+.main > *{
+    
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body {
+    background-color: #22022e9f; /* Replace #ff0000 with the color of your choice */
+}
+
+
+/* audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+audio::-webkit-media-controls,
+video::-webkit-media-controls {
+    display: none;
+} */
+
+
+
+
+button {
+    /* Basic button styles */
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    /* Default button colors */
+    background-color: rgba(42, 30, 54, 0.563);; /* Green background */
+    color: white; /* White text */
+    border:1px solid rgba(0, 0, 0, 0.412); /* No border */
+    border-radius: 5px; /* Rounded corners */
+    /* Adds a box shadow for a 3D effect */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
+
+input[type=range] {
+    /* Removes default styles */
+    -webkit-appearance: none;
+    appearance: none;
+    /* Width and height of the slider */
+    width: 100%;
+    height: 25px;
+    /* Styles for the track */
+    background-color: rgb(84, 63, 104);/
+    border-radius: 5px;
+    /* Styles for the thumb (slider handle) */
+    cursor: pointer;
+}
+
+/* Change the color of the track as the slider is dragged */
+input[type=range]::-webkit-slider-runnable-track {
+    background: rgb(46, 34, 58);; /* Green track color */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+
+}
+
+/* Change the color of the thumb (slider handle) */
+input[type=range]::-webkit-slider-thumb {
+    background: #ffffff; /* White thumb color */
+    border: 1px solid #4caf50; /* Green border around the thumb */
+    border-radius: 50%; /* Rounded thumb */
+    /* Adds a box shadow to the thumb for a more prominent effect */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* Change the color of the thumb (slider handle) when active (clicked or dragged) */
+input[type=range]:active::-webkit-slider-thumb {
+    background: #ff9800; /* Orange thumb color */
+    border-color: #ff9800; /* Orange border color */
+}
+
+/* Change the color of the value (highlight) on the track */
+input[type=range]::-moz-range-progress {
+    background-color: #ff9800; /* Orange highlight color */
+}

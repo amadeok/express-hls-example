@@ -4,30 +4,33 @@
 <head>
     <meta charset="UTF-8" />
     <title>HLS Player</title>
+    <link rel="stylesheet" href="style">
+
 </head>
 
 <body>
-    <video id="video" width="500" height="500" controls></video>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script>
-        const video = document.getElementById('video');
-        const videoSrc = '/videos/output.m3u8';
+    <div class="main"> 
+    <video id="video" class="video-class" controls muted></video>
 
-        if (Hls.isSupported()) {
-            const hls = new Hls();
+    <ul class="file-list" id="file-list">
+        <!-- File items will be added here dynamically using JavaScript -->
+    </ul>
 
-            hls.loadSource(videoSrc);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                video.play();
-            });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = videoSrc;
-            video.addEventListener('loadedmetadata', () => {
-                video.play();
-            });
-        }
-    </script>
+    
+    <!-- <button onclick="myFunction()">Click Me!</button> -->
+    <div id="buttons">
+    <button id="triggerButton">Play / Pause </button>
+    <button id="toggle-button">Show Video</button>
+    </div>
+    <div id="result"></div>
+    <input type="range" min="0" max="1000" value="50" class="slider" id="seek-slider">
+    <div id="slider-value"></div>
+    <div id="response"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"> </script>
+
+    <script src="clientjs"></script>
+    </div>
 </body>
 
 </html>
